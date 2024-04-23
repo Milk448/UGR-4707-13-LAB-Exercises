@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-// Data Model
 class Post {
   final int id;
   final String title;
@@ -20,7 +19,6 @@ class Post {
   }
 }
 
-// Post Provider
 class PostProvider with ChangeNotifier {
   List<Post> _posts = [];
   bool _isLoading = false;
@@ -39,7 +37,6 @@ class PostProvider with ChangeNotifier {
       final List<dynamic> data = jsonDecode(response.body);
       _posts = data.map((json) => Post.fromJson(json)).toList();
     } else {
-      // Handle error
       _posts = [];
     }
 
@@ -90,9 +87,7 @@ class PostListScreen extends StatelessWidget {
               final post = posts[index];
               return ListTile(
                 title: Text(post.title),
-                onTap: () {
-                  // Navigate to details screen
-                },
+                onTap: () {},
               );
             },
           );
