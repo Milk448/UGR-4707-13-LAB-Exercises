@@ -13,7 +13,7 @@ class ScreenTwo extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
             child: const Text(
-              "Back",
+              "Back to previous screen",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
